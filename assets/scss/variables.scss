@@ -1,3 +1,7 @@
+$dark-grey: #242742;
+$white-box:  hsl(0, 0%, 100%);
+$color-txt:rgb(36, 39, 66);
+
 @mixin tablet {
     @media (max-width: 1100px) {
       @content;
@@ -5,7 +9,7 @@
   }
   
   @mixin mobile {
-    @media (max-width: 450px) {
+    @media (max-width: 500px) {
       @content;
     }
   }
