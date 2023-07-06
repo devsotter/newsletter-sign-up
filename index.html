@@ -22,19 +22,39 @@
         <div class="form">
           
      <div class="gap-input">
-      <div class="alert"><label for="email">Email address </label> <span>Valid email Required</span></div>
-      <input type="email" id="email" name="email" placeholder="email@company.com" required>
+      <div class="alert"><label for="email">Email address </label> <span></span></div>
+      <input class="error" type="email" id="email"  name="email" placeholder="email@company.com" required>
      </div>
           <button>Subscribe to monthly newsletter</button>
         </div>
         </div>
         
 
-        <div class="image"></div>
+        <div class="image">
+          <img class="desktop" src="./assets/images/illustration-sign-up-desktop.svg">
+          <img class="mobile" src="./assets/images/illustration-sign-up-mobile.svg">
+        </div>
 
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <div class="gap-text">
+            <img src="./assets/images/icon-success.svg" alt="">
 
+          <h2>  Thanks for subscribing!</h2>
+          <div class="message">
+          <p>  A confirmation email has been sent to  <span id="modalEmail"></span>
+          Please open it and click the button inside to confirm your subscription.</p>
+          
+        </div>
+            </div>
+          <div class="gap-btn">  <button>  Dismiss message</button></div>
+          
+          </div>
+        </div>
       </div>
+      
   </main>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
 

@@ -1,8 +1,11 @@
 @import "./reset.scss";
 @import "./variables.scss";
+@import "./modal.scss";
 
 body {
   background-color: $dark-grey;
+  font-size: 16px;
+  color: $dark-grey;
 
   .container {
     height: 100vh;
@@ -22,37 +25,32 @@ body {
       flex-wrap: wrap-reverse;
 
       @include mobile {
-        padding: 0;
         border-radius: 0;
       }
 
-      .image {
-        background-image: url(/assets/images/illustration-sign-up-desktop.svg);
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        border-radius: 20px;
-        background-color: red;
-        height: 593px;
-        width:  400px;
-
+      .desktop {
         @include mobile {
-            width: 100%;
+          display: none;
         }
-
-    
       }
+
+      .mobile {
+        display: none;
+        @include mobile {
+          display: block;
+        }
+      }
+
       .text {
         gap: 2rem;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         flex-direction: column;
         margin: 4.2rem 3rem;
-        height: 100%;
         max-width: 390px;
 
         @include mobile {
-        margin: 2rem;
+          margin: 1.5rem;
         }
 
         h1 {
@@ -67,7 +65,6 @@ body {
 
         ul {
           li {
-         
             gap: 20px;
             display: flex;
             justify-content: left;
@@ -76,8 +73,7 @@ body {
             margin-top: 10px;
 
             svg {
-           
-                min-width: 25px;
+              min-width: 25px;
             }
           }
         }
@@ -87,13 +83,21 @@ body {
           justify-content: center;
           align-items: left;
           flex-direction: column;
-            
+
+          #email.error {
+            border: 2px solid rgb(254, 132, 101);
+            background-color: #ffe8de;
+          }
+          input.error::placeholder {
+            color: rgb(255, 98, 87);
+          }
+
           .gap-input {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
           }
-          
+
           .alert {
             display: flex;
             justify-content: space-between;
@@ -103,8 +107,8 @@ body {
               color: rgb(255, 98, 87);
             }
             label {
-                font-size: 12px;
-                font-weight: 700;
+              font-size: 12px;
+              font-weight: 700;
             }
           }
           #email {
@@ -112,6 +116,8 @@ body {
             padding: 1.2rem;
             background-color: rgb(255, 255, 255);
             border: 1px solid rgb(146, 148, 160);
+            font-size: 15px;
+            cursor: pointer;
           }
           button {
             font-size: 16px;
@@ -123,6 +129,12 @@ body {
             border-radius: 8px;
             text-align: center;
             cursor: pointer;
+            border: none;
+
+            &:hover {
+              background: $gradient;
+              box-shadow: rgba(255, 98, 87, 0.5) 0px 15px 30px;
+            }
           }
         }
       }
