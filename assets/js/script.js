@@ -6,6 +6,7 @@ const modal = document.getElementById('modal');
 const modalEmail = document.getElementById('modalEmail');
 const closeModalButton = document.querySelector('#modal button');
 
+// Evento de envio do formulário
 submitButton.addEventListener('click', (event) => {
   event.preventDefault();
 
@@ -24,6 +25,12 @@ submitButton.addEventListener('click', (event) => {
   }
 });
 
+// Evento de fechamento do modal
 closeModalButton.addEventListener('click', () => {
   modal.style.display = 'none';
+});
+
+// Evento de carregamento da página
+window.addEventListener('load', () => {
+  emailInput.classList.remove('error');
 });
