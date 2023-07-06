@@ -1,0 +1,16 @@
+@import "./reset.scss";
+@import "./variables.scss";
+
+.container {
+    height: 100vh;
+max-width: 1440px;
+margin: 0 auto;
+
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
+
