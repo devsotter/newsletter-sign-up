@@ -7,7 +7,7 @@ $gradient: linear-gradient(to right, rgb(244, 62, 132), rgb(255, 98, 87));
 
 
 @mixin tablet {
-    @media (max-width: 1100px) {
+    @media (max-width: 925px) {
       @content;
     }
   }
